@@ -1,0 +1,159 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================= BODY ================= */
+body {
+    height: 100vh;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background: linear-gradient(135deg, #dfbdf5, #8fa6ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ================= MAIN CONTAINER ================= */
+.Container {
+    background: #ffffff;
+    width: 270px;
+    padding: 30px 30px 30px;
+    border-radius: 29px;
+    box-shadow: 0 20px 40px rgba(0, 122, 0, 0.25);
+    text-align: center;
+}
+
+/* ================= TITLE ================= */
+.Container::before {
+    content: "TIC TAC TOE GAME";
+    display: block;
+    font-size: 20px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    color: #1411188b;
+    margin-bottom: 18px;
+
+}
+
+/* ================= RESULT TEXT ================= */
+#winner {
+    color: #000000;
+    font-size: 25px;
+    min-height: 24px;
+    margin-bottom: 4px;
+   
+   
+}
+
+#Draw {
+    color: #1E293B;
+    font-size: 25px;
+    min-height: 24px;
+    margin-bottom: 10px;
+}
+
+/* ================= GRID ================= */
+.grid {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+}
+
+/* ================= CELLS ================= */
+.col {
+    width: 70px;
+    height: 70px;
+    border: 2px solid #555;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+/* Hover effect */
+.col:hover {
+    background: #f1f2f6;
+    transform: scale(1.04);
+}
+
+/* ================= WIN HIGHLIGHT ================= */
+.win {
+    background: #ffeaa7 !important;
+    border-color: #fdcb6e !important;
+}
+
+/* ================= RESET BUTTON (if added) ================= */
+.reset-btn {
+    margin-top: 15px;
+    padding: 10px 18px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #00b894, #0984e3);
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.reset-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+/* ===== TOP RESULT ===== */
+.top-result {
+    position: absolute;
+    top: 25px;
+    width: 100%;
+    text-align: center;
+}
+
+#winText {
+    color: #2ecc71;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+#loseText {
+    color: #e74c3c;
+    font-size: 22px;
+}
+/* ===== START PAGE ===== */
+.start-container {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+.start-container h1 {
+    margin-bottom: 20px;
+}
+
+.start-container input {
+    display: block;
+    width: 220px;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.start-container button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background: linear-gradient(135deg, #0984e3, #6c5ce7);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}

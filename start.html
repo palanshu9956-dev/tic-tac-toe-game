@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Choose Players</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="start-container">
+    <h1>Tic Tac Toe</h1>
+
+    <input type="text" id="playerX" placeholder="Enter Player X Name" required>
+    <input type="text" id="playerO" placeholder="Enter Player O Name" required>
+
+    <button onclick="startGame()">Start Game ▶️</button>
+</div>
+
+<script>
+function startGame() {
+    const x = document.getElementById("playerX").value || "Player X";
+    const o = document.getElementById("playerO").value || "Player O";
+
+    localStorage.setItem("playerX", x);
+    localStorage.setItem("playerO", o);
+
+    window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>
