@@ -2,54 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tic Tac Toe Game</title>
-    <style>
-        body{
-            font-family: 'Times New Roman', Times, serif;
-        }
-        .row{
-            display: flex;
-        }
-        .col{
-            height: 60px;
-            width: 60px;
-            border: 1px solid black;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 30px;
-            cursor: pointer;
-        }
-    </style>
+    <title>Choose Players</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="top-result">
-    <h1 id="winText"></h1>
-    <h2 id="loseText"></h2>
+
+<div class="start-container">
+    <h1>Tic Tac Toe</h1>
+
+    <input type="text" id="playerX" placeholder="Enter Player X Name" required>
+    <input type="text" id="playerO" placeholder="Enter Player O Name" required>
+
+    <button onclick="startGame()">Start Game ▶️</button>
 </div>
-    <h2 id="winner"></h2>
-    <h2 id="Draw"></h2>
-    <div class="Container">
-        <div class="grid">
-            <div class="row">
-                <div onclick="handleClick(this)" id="0" class="col"></div>
-                <div onclick="handleClick(this)" id="1" class="col"></div>
-                <div onclick="handleClick(this)" id="2" class="col"></div>
-            </div>
-            <div class="row">
-                <div onclick="handleClick(this)" id="3" class="col"></div>
-                <div onclick="handleClick(this)" id="4" class="col"></div>
-                <div onclick="handleClick(this)" id="5" class="col"></div>
-            </div>
-            <div class="row">
-                <div onclick="handleClick(this)" id="6" class="col"></div>
-                <div onclick="handleClick(this)" id="7" class="col"></div>
-                <div onclick="handleClick(this)" id="8" class="col"></div>
-            </div>
-        </div>
-    </div>
-    <script src="script.js"></script>
+
+<script>
+function startGame() {
+    const x = document.getElementById("playerX").value || "Player X";
+    const o = document.getElementById("playerO").value || "Player O";
+
+    localStorage.setItem("playerX", x);
+    localStorage.setItem("playerO", o);
+
+    window.location.href = "index.html";
+}
+</script>
+
 </body>
 </html>
