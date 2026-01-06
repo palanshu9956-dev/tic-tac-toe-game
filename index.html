@@ -13,7 +13,7 @@
     <input type="text" id="playerX" placeholder="Enter Player X Name" required>
     <input type="text" id="playerO" placeholder="Enter Player O Name" required>
 
-    <button onclick="startGame()">Start Game ▶️</button>
+    <button id="startBtn">Start Game ▶️</button>
 </div>
 
 <script>
@@ -26,6 +26,22 @@ function startGame() {
 
     window.location.href = "index.html";
 }
+</script>
+<script>
+document.getElementById("startBtn").addEventListener("click", function () {
+    const x = document.getElementById("playerX").value.trim();
+    const o = document.getElementById("playerO").value.trim();
+
+    if (x === "" || o === "") {
+        alert("Please enter both player names");
+        return;
+    }
+
+    localStorage.setItem("playerX", x);
+    localStorage.setItem("playerO", o);
+
+    window.location.href = "start.html";
+});
 </script>
 
 </body>
